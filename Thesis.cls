@@ -193,11 +193,11 @@
 %-------------------------------------------------  
 \supervisor{Dr. Supervisor 1} % You supervisor's name - this is used in the title page
 % -------------------------------------------------
-\supervisorrole{Associate Professor}
+\supervisorrole{[Assistant or Associate] Professor}
 % -------------------------------------------------
 \supervisortwo{Dr. Supervisor 2}
 % -------------------------------------------------
-\supervisortworole{Assistant Professor}
+\supervisortworole{[Assistant or Associate] Professor}
 % -------------------------------------------------
 \enroll{19111XXX}
 %-------------------------------------------------   
@@ -276,6 +276,7 @@
         Department:  \textbf{\shortdept} \\
 		Thesis title: \textbf{\@title}\\
 		Thesis supervisor:  \textbf{\supname}\\
+        Co-supervisor: \textbf{\supnametwo} \\
 		Month and year of thesis submission: \textbf{{\large \today}\\[0.4cm] }
 		\HRule \\[1.5cm] % Horizontal line	
 	
