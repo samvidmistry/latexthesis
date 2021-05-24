@@ -158,6 +158,7 @@
    \let\\\space
 }
 \newcommand*{\supervisor}[1]{\def\supname{#1}}
+\newcommand*{\supervisortwo}[1]{\def\supnametwo{#1}}
 \newcommand*{\thesistitle}[1]{\def\ttitle{#1}}
 \newcommand*{\examiner}[1]{\def\examname{#1}}
 \newcommand*{\degree}[1]{\def\degreename{#1}}
@@ -167,6 +168,9 @@
 \newcommand*{\UNIVERSITY}[1]{\def\UNIVNAME{#1}}
 \newcommand*{\department}[1]{\def\deptname{#1}}
 \newcommand*{\DEPARTMENT}[1]{\def\DEPTNAME{#1}}
+\newcommand*{\shortdepartment}[1]{\def\shortdept{#1}}
+\newcommand*{\SHORTDEPARTMENT}[1]{\def\SHORTDEPT{#1}}
+\newcommand*{\enroll}[1]{\def\rollno{#1}}
 \newcommand*{\group}[1]{\def\groupname{#1}}
 \newcommand*{\GROUP}[1]{\def\GROUPNAME{#1}}
 \newcommand*{\faculty}[1]{\def\facname{#1}}
@@ -182,15 +186,19 @@
 %	defined as \examname above so you cite it as \examname
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Thesis Title} % Your thesis title - this is used in the title and abstract
+\thesistitle{Title} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
-\supervisor{Thesis Supervisor} % You supervisor's name - this is used in the title page
+\supervisor{Dr. Supervisor 1} % You supervisor's name - this is used in the title page
+% -------------------------------------------------
+\supervisortwo{Dr. Supervisor 2}
+% -------------------------------------------------
+\enroll{19111XXX}
 %-------------------------------------------------   
 \examiner{} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
 %-------------------------------------------------   
-\degree{Master of Technology/PhD} % Your degree name - this is currently used in the title page and abstract
+\degree{Master of Technology} % Your degree name - this is currently used in the title page and abstract
 %-------------------------------------------------   
-\authors{authorname} % Your name - this is used in the title page and abstract
+\authors{Mystery Author} % Your name - this is used in the title page and abstract
 %-------------------------------------------------   
 \addresses{} % Your address - this is not currently used anywhere in the template, cite it with \addressnames if you want it
 %-------------------------------------------------   
@@ -207,12 +215,20 @@
                 {INDIAN INSTITUTE OF TECHNOLOGY KANPUR}}
 %-------------------------------------------------                
 \department{\texorpdfstring{\href{Department or School Web Site URL Here (include http://www.iitk.ac.in/ce)} % Your department's URL
-                {Department of Civil Engineering}} % Your department's name - used in the title page and abstract
-                {Department of Civil Engineering}}
+                {Department of Computer Science and Engineering}} % Your department's name - used in the title page and abstract
+                {Department of Computer Science and Engineering}}
 %-------------------------------------------------                
 \DEPARTMENT{\texorpdfstring{\href{Department or School Web Site URL Here (include http://www.iitk.ac.in/ce)} % Your department's URL
-                {DEPARTMENT OF CIVIL ENGINEERING}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
-                {DEPARTMENT OF CIVIL ENGINEERING}}
+                {DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
+              {DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING}}
+% -------------------------------------------------
+\shortdepartment{\texorpdfstring{\href{Department or School Web Site URL Here (include http://www.iitk.ac.in/ce)} % Your department's URL
+                {Computer Science and Engineering}} % Your department's name - used in the title page and abstract
+                {Computer Science and Engineering}}
+%-------------------------------------------------                
+\SHORTDEPARTMENT{\texorpdfstring{\href{Department or School Web Site URL Here (include http://www.iitk.ac.in/ce)} % Your department's URL
+                {COMPUTER SCIENCE AND ENGINEERING}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
+              {COMPUTER SCIENCE AND ENGINEERING}}
 %-------------------------------------------------                
 %\group{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL
 %                {Research Group Name}} % Your research group's name - this is currently used in the title page 
@@ -231,61 +247,6 @@
   %              {FACULTY NAME (IN BLOCK CAPITALS)}}
 %----------------------------------------------------------------------------------------    
 
-% The default title page, this is not used in this www.latextemplates.com version            
-\renewcommand\maketitle{
-  \btypeout{Title Page}
-  \hypersetup{pdftitle={\@title}}
-  \hypersetup{pdfsubject=\subjectname}
-  \hypersetup{pdfauthor=\authornames}
-  \hypersetup{pdfkeywords=\keywordnames}
-  \thispagestyle{empty}
-  \begin{titlepage}
-    \let\footnotesize\small
-    \let\footnoterule\relax
-    \let \footnote \thanks
-    \setcounter{footnote}{0}
-    \null\vfil
-    \vskip 60\p@
-    \begin{center}
-      \setlength{\parskip}{0pt}
-      {\large\textbf{\UNIVNAME}\par}
-      \vfill
-      {\huge \bf \@title \par}
-      \vfill
-      {\LARGE by \par}
-      \smallskip
-      {\LARGE \authornames \par}
-      \vfill
-      {\large A thesis submitted in partial fulfillment for the \par}
-      {\large degree of \degreename \par}
-      \bigskip
-      \bigskip
-      {\large in the \par}
-      {\large \facname \par}
-      {\large \deptname \par} 
-      \bigskip
-      \bigskip
-      \bigskip
-      {\Large \@date \par}
-      \bigskip
-    \end{center}
-    \par
-    \@thanks
-    \vfil\null
-  \end{titlepage}
-  \setcounter{footnote}{0}%
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@thanks\@empty
-  \global\let\@author\@empty
-  \global\let\@date\@empty
-  \global\let\@title\@empty
-  \global\let\title\relax
-  \global\let\author\relax
-  \global\let\date\relax
-  \global\let\and\relax
-  \cleardoublepage
-}
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE DESIGN
 %----------------------------------------------------------------------------------------
@@ -301,8 +262,9 @@
     {\centering{\huge{\textit{Abstract}}} \par}
     \bigskip
     \HRule \\[0.4cm] % Horizontal line
-		Name of the student:	 \textbf{\authornames}	\hfill Roll No: \textbf{Roll No.} \\
-		Degree for which submitted:  \textbf{M.Tech.} \hfill Department:  \textbf{Civil Engineering} \\
+		Name of the student:	 \textbf{\authornames}	\hfill Roll No: \textbf{\rollno} \\
+		Degree for which submitted:  \textbf{M.Tech.} \\
+        Department:  \textbf{\shortdept} \\
 		Thesis title: \textbf{\@title}\\
 		Thesis supervisor:  \textbf{\supname}\\
 		Month and year of thesis submission: \textbf{{\large \today}\\[0.4cm] }
