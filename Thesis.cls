@@ -171,6 +171,7 @@
 \newcommand*{\shortdepartment}[1]{\def\shortdept{#1}}
 \newcommand*{\SHORTDEPARTMENT}[1]{\def\SHORTDEPT{#1}}
 \newcommand*{\enroll}[1]{\def\rollno{#1}}
+\newcommand*{\authoremail}[1]{\def\authemail{#1}}
 \newcommand*{\group}[1]{\def\groupname{#1}}
 \newcommand*{\GROUP}[1]{\def\GROUPNAME{#1}}
 \newcommand*{\faculty}[1]{\def\facname{#1}}
@@ -199,34 +200,36 @@
 \degree{Master of Technology} % Your degree name - this is currently used in the title page and abstract
 %-------------------------------------------------   
 \authors{Mystery Author} % Your name - this is used in the title page and abstract
-%-------------------------------------------------   
+% -------------------------------------------------
+\authoremail{xyz@cse.iitk.ac.in}
+%--------------------------------------------------
 \addresses{} % Your address - this is not currently used anywhere in the template, cite it with \addressnames if you want it
 %-------------------------------------------------   
 \subject{} % Your subject area - this is not currently used anywhere in the template, cite it with \subjectname if you want it
 %-------------------------------------------------   
 \keywords{} % Keywords for your thesis - this is not currently used anywhere in the template, cite it with \keywordnames if you want it
 %-------------------------------------------------   
-\university{\texorpdfstring{\href{http://www.iitk.ac.in} % Your university's URL
+\university{\texorpdfstring{\href{https://www.iitk.ac.in} % Your university's URL
                 {Indian Institute of Technology Kanpur}} % Your university's name - this is currently used in the title page
                 {Indian Institute of Technology Kanpur}}
 %-------------------------------------------------   
-\UNIVERSITY{\texorpdfstring{\href{University Web Site URL Here (include http://www.iitk.ac.in)} % Your university's URL
+\UNIVERSITY{\texorpdfstring{\href{https://www.iitk.ac.in} % Your university's URL
                 {INDIAN INSTITUTE OF TECHNOLOGY KANPUR}} % Your university's name in capitals - this is currently used in the abstract page
                 {INDIAN INSTITUTE OF TECHNOLOGY KANPUR}}
 %-------------------------------------------------                
-\department{\texorpdfstring{\href{Department or School Web Site URL Here (include http://www.iitk.ac.in/ce)} % Your department's URL
+\department{\texorpdfstring{\href{https://cse.iitk.ac.in} % Your department's URL
                 {Department of Computer Science and Engineering}} % Your department's name - used in the title page and abstract
                 {Department of Computer Science and Engineering}}
 %-------------------------------------------------                
-\DEPARTMENT{\texorpdfstring{\href{Department or School Web Site URL Here (include http://www.iitk.ac.in/ce)} % Your department's URL
+\DEPARTMENT{\texorpdfstring{\href{https://cse.iitk.ac.in)} % Your department's URL
                 {DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
               {DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING}}
 % -------------------------------------------------
-\shortdepartment{\texorpdfstring{\href{Department or School Web Site URL Here (include http://www.iitk.ac.in/ce)} % Your department's URL
+\shortdepartment{\texorpdfstring{\href{https://cse.iitk.ac.in)} % Your department's URL
                 {Computer Science and Engineering}} % Your department's name - used in the title page and abstract
                 {Computer Science and Engineering}}
 %-------------------------------------------------                
-\SHORTDEPARTMENT{\texorpdfstring{\href{Department or School Web Site URL Here (include http://www.iitk.ac.in/ce)} % Your department's URL
+\SHORTDEPARTMENT{\texorpdfstring{\href{https://cse.iitk.ac.in} % Your department's URL
                 {COMPUTER SCIENCE AND ENGINEERING}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
               {COMPUTER SCIENCE AND ENGINEERING}}
 %-------------------------------------------------                
