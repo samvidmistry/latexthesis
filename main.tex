@@ -72,8 +72,10 @@
   \includegraphics[width=0.35\linewidth]{blacklogo}
 \end{figure}
 
-\DEPTNAME\\ % Research group name and department name
-\textsc{ \UNIVNAME}\\[1.5cm] % University name
+\large \textit{to the}
+
+{\Large \textbf{\deptname}}\\ % Research group name and department name
+{\Large \textsc{ \univname}}\\[1.5cm] % University name
 \large \today\\[2cm] % Date
 
 
@@ -100,7 +102,31 @@ It is certified that the work contained in this thesis entitled ''\ttitle'' by '
 	{\begin{center} \large
 		\supname
 		\begin{center}
-			{Professor\\ 
+			{\supdesig{}\\ 
+			\normalsize{\deptname\\
+			\univname}}
+		\end{center}
+	\end{center}}
+\end{minipage}
+\vfill{}}
+
+\clearpage % Start a new page
+
+\Declaration{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+It is certified that the work contained in this thesis entitled ''\ttitle'' by ''\authornames'' has been carried out under my supervision and that it has not been submitted elsewhere for a degree.
+\\[2cm]
+
+\begin{minipage}{0.4\textwidth}
+	\begin{flushleft} \large
+		\emph{\large \today}\\[2cm] % Date
+	\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.65\textwidth}
+	{\begin{center} \large
+		\supnametwo
+		\begin{center}
+			{\supdesigtwo{}\\ 
 			\normalsize{\deptname\\
 			\univname}}
 		\end{center}
