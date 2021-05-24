@@ -158,7 +158,9 @@
    \let\\\space
 }
 \newcommand*{\supervisor}[1]{\def\supname{#1}}
+\newcommand*{\supervisorrole}[1]{\def\supdesig{#1}}
 \newcommand*{\supervisortwo}[1]{\def\supnametwo{#1}}
+\newcommand*{\supervisortworole}[1]{\def\supdesigtwo{#1}}
 \newcommand*{\thesistitle}[1]{\def\ttitle{#1}}
 \newcommand*{\examiner}[1]{\def\examname{#1}}
 \newcommand*{\degree}[1]{\def\degreename{#1}}
@@ -191,7 +193,11 @@
 %-------------------------------------------------  
 \supervisor{Dr. Supervisor 1} % You supervisor's name - this is used in the title page
 % -------------------------------------------------
+\supervisorrole{Associate Professor}
+% -------------------------------------------------
 \supervisortwo{Dr. Supervisor 2}
+% -------------------------------------------------
+\supervisortworole{Assistant Professor}
 % -------------------------------------------------
 \enroll{19111XXX}
 %-------------------------------------------------   
