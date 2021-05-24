@@ -10,7 +10,7 @@
 
 
 %\usepackage{subcaption} %incompatible with subfig
-\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+\graphicspath{{Pictures/} {./Figures/}} % Specifies the directory where pictures are stored
 \usepackage[square, numbers]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' v
 
 \hypersetup{urlcolor=black, colorlinks=true} % Colors hyperlinks in blue - change to black if annoyingv`	
@@ -35,7 +35,7 @@
 
 \pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+\newcommand{\HRule}{\rule{\linewidth}{0.2mm}} % New command to make the lines in the title page
 
 % PDF meta-data
 \hypersetup{pdftitle={\ttitle}}
@@ -52,18 +52,24 @@
 
 \HRule \\[0.4cm] % Horizontal line
 {\huge \bfseries \ttitle}\\[0.4cm] % Thesis title
-\HRule \\[1.5cm] % Horizontal line
+\HRule \\[0.5cm] % Horizontal line
  
 \large \textit{A thesis submitted in fulfilment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
 \textit{by}\\[0.4cm]
 
-\href{http://home.iitk.ac.in/~saiwal}{\authornames}
+{\Large \href{\authemail}{\textbf{\authornames}}} \\
+{\Large \textbf{\rollno}}
+
+\large \textit{under the guidance of} \\
+
+\supname{} \\
+\supnametwo{} \\
 
 \vfill
-\graphicspath{ {./Figures/} }
+
 \begin{figure}[hb]
   \centering
-  \includegraphics[width=0.4\linewidth]{Pictures/redlogo.jpg}
+  \includegraphics[width=0.35\linewidth]{blacklogo}
 \end{figure}
 
 \DEPTNAME\\ % Research group name and department name
@@ -257,3 +263,8 @@ $ \varepsilon $ & strain tensor \\
 \bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
 
 \end{document}  
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
